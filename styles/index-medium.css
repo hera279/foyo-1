@@ -19,7 +19,7 @@
         object-fit: cover;
     }
     .brand h1 {
-        font-size: 80pt;
+        font-size: 60pt;
     }
     .brand h2 {
         font-size: 30pt;
@@ -81,7 +81,7 @@
         padding: 0;
     }
     .brand-footer h1 {
-        font-size: 80pt;
+        font-size: 30pt;
     }
     .brand-footer p {
         font-size: 9pt;
