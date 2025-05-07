@@ -49,29 +49,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-// Load footer dynamically
-document.addEventListener("DOMContentLoaded", () => {
-    const footerPlaceholder = document.getElementById('footer-placeholder');
-    if (!footerPlaceholder) {
-        console.error('Footer placeholder not found in the DOM.');
-        return;
-    }
-
-    console.log('Attempting to load footer.html...');
-    fetch('footer.html')
-        .then(response => {
-            console.log(`Fetch response status: ${response.status}`);
-            if (!response.ok) {
-                throw new Error(`Failed to load footer.html: ${response.status} ${response.statusText}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            footerPlaceholder.innerHTML = data;
-            console.log('Footer loaded successfully.');
-        })
-        .catch(error => {
-            console.error('Error loading footer:', error);
-        });
-});

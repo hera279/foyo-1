@@ -64,7 +64,7 @@ p.in-viewport {
 }
 .brand h1, .subdomain h1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 80pt;
+    font-size: 0pt;
     padding: 0;
     margin: 0;
 }
@@ -314,7 +314,7 @@ p.in-viewport {
 }
 .brand-footer h1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 80pt;
+    font-size: 60pt;
     padding: 0;
     margin: 0;
 }
