@@ -48,4 +48,16 @@ document.addEventListener("DOMContentLoaded", () => {
             updateSliderPosition();
         }
     });
+
+    const topicButtons = document.querySelectorAll(".topics button");
+
+    topicButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Remove the active class from all buttons
+            topicButtons.forEach(btn => btn.classList.remove("active"));
+
+            // Add the active class to the clicked button
+            button.classList.add("active");
+        });
+    });
 });

@@ -9,13 +9,12 @@
     color: white;
 }
 .domain button {
-    width: auto;
+    width: 90%;
     margin: 0;
 }
 .domain button a{
-    font-size: 18pt;
+    font-size: 16pt;
     letter-spacing: 0.5pt;
-
 }
 
 .domain a {
@@ -35,7 +34,7 @@
     color: white;
 }
 .topics {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(255, 255, 255);
     padding-bottom: 50px;
 }
 .topics button {
@@ -49,6 +48,17 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 16pt;
     cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.topics button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
+}
+
+.topics button.active {
+    text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
+    box-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
 }
 
 .topic-section {
@@ -62,25 +72,28 @@
 
 main {
     padding: 100px;
-    background: white;
+    background: linear-gradient(to top, #ff7700, #000024);
 }
 #section-topic1, #section-topic2, #section-topic3 {
     padding: 0;
 }
 #section-topic1  h2, p, #section-topic2 h2, p, #section-topic3 h2, p {
     text-align: left;
+    color: white
 }
 
 #section-topic1 h2, #section-topic2 h2, #section-topic3 h2 {
     font-size: 35pt;
+    color: white
 }
 
 #section-topic1 p, #section-topic2 p, #section-topic3 p {
     text-align: justify;
     font-size: 15pt;
+    color: white;
 }
 .topic-section {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 #section-topic3 ul {
     list-style-type: none;
@@ -93,6 +106,7 @@ main {
     color: var(--color-primary);
     text-decoration: none;
     font-size: 15pt;
+    color: white;
 }
 #section-topic3 ul li a:hover {
     text-decoration: underline;
@@ -127,11 +141,13 @@ main {
 #thumbnail-title {
     font-size: 20pt;
     font-family: 'Times New Roman', serif;
+    color: white
 }
 
 #thumbnail-description {
     font-size: 15pt;
     font-family: 'Maven Pro', sans-serif;
+    color: white
 }
 
 .slider.hover-slider {
