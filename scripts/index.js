@@ -28,9 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     triggers.forEach(trigger => {
         trigger.addEventListener("click", () => {
-            // Replace newlines (\n) in data-content with <br> tags
             const content = trigger.getAttribute("data-content").replace(/\\n/g, "<br>");
-            display.innerHTML = content; // Use innerHTML to render <br> tags
+            display.innerHTML = content;
         });
     });
 });
@@ -41,10 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     accordionButtons.forEach((button) => {
         button.addEventListener('click', () => {
-            // Get the data-content attribute of the clicked button
             const content = button.getAttribute('data-content');
-
-            // Update the accordion-content area with the data-content text
             accordionContent.innerHTML = content;
         });
     });
