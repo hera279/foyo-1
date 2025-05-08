@@ -1,14 +1,19 @@
 @media (max-width: 767px) {
+    .header-video {
+        display: block;
+    }
     .section-header {
         flex-direction: column;
         padding: 50px;
     }
-    
+    .domain button {
+        width: auto
+    }
     .domain button a{
-        font-size: 16pt;
+        font-size: 12pt;
     }
     .subdomain h1 {
-        font-size: 40pt;
+        font-size: 25pt;
     }
     
     .subdomain p {
@@ -16,7 +21,7 @@
         text-align: justify;
     }
     .domain h2 {
-        font-size: 18pt;
+        font-size: 15pt;
         text-align: left;
     }
     .know-more a {

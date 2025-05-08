@@ -1,21 +1,24 @@
 @media (min-width: 768px) and (max-width: 1024px) {
+    .header-video {
+        display: block;
+    }
     .section-header {
         padding: 50px;
     }
     .domain button {
-        width: 90%;
+        width: 100%;
         margin: 0;
     }
     .domain button a{
-        font-size: 16pt;
+        font-size: 12pt;
     }
     
     .domain a {
-        font-size: 16pt;
+        font-size: 12pt;
     }
     
     .subdomain h1 {
-        font-size: 45pt;
+        font-size: 30pt;
     }
     
     .subdomain p {
@@ -25,11 +28,10 @@
         width: 25%;
         padding: 10px;
         margin: 0 15px;
-        font-size: 14pt;
+        font-size: 12pt;
     }
     main {
         padding: 50px;
-        background: linear-gradient(to top, #ff7700, #000024);
     }
     #section-topic1, #section-topic2, #section-topic3 {
         padding: 0;

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.69 56.69">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Generative_Object" data-name="Generative Object">
+    <g>
+      <path class="cls-1" d="M18.18,7.29l-.18.17-10.56,9.24c-.62,1.32,5.03,11.63,4.79,14.12-.49,5.04-7.41,16.29-9.2,22.14-.15.49-.72,1.62-.07,1.82l51.36-.03-9.79-23.92,4.79-14.12-10.68-9.09"/>
+      <line class="cls-1" x1="18.18" y1="7.29" x2="18.33" y2="2.2"/>
+      <polyline class="cls-1" points="18.18 7.29 28.27 14.14 38.46 7.74 38.65 7.61"/>
+      <line class="cls-1" x1="38.65" y1="7.61" x2="38.71" y2="2.2"/>
+    </g>
+  </g>
+</svg>

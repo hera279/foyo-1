@@ -58,6 +58,9 @@
         float: right;
         padding: 5px;
     }
+    .section-1, .section-header {
+        background: linear-gradient(to top, var(--color-quaternary) 0%, var(--color-primary) 40%, transparent 70%);
+    }
     .section-2 {
         padding: 20px;
         background: linear-gradient(to bottom, var(--color-quaternary) 70%, var(--color-secondary) 90%, rgba(224, 93, 0, 0.8) 100%);
