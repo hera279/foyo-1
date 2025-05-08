@@ -1,7 +1,4 @@
 @media (max-width: 767px) {
-    .header-video {
-        display: block;
-    }
     .section-header {
         flex-direction: column;
         padding: 50px;

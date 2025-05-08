@@ -1,7 +1,4 @@
 @media (min-width: 768px) and (max-width: 1024px) {
-    .header-video {
-        display: block;
-    }
     .section-header {
         padding: 50px;
     }

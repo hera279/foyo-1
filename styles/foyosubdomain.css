@@ -4,9 +4,6 @@
     --color-tertiary: #44002d;
     --color-quaternary: #000024;
 }
-.header-video {
-    display: none;
-}
 .subdomain a {
     text-decoration: none;
     color: white;
