@@ -263,16 +263,6 @@ main {
     text-align: justify;
     margin: 0;
 }
-.header-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    pointer-events: none;
-}
 
 .thumbnail.active {
     transform: scale(1.1);
