@@ -333,3 +333,17 @@ h1.in-viewport, h2.in-viewport, h3.in-viewport, h4.in-viewport, h5.in-viewport, 
     opacity: 1;
     transform: translateY(0);
 }
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Ensure it appears above other elements */
+    display: none; /* Hidden by default */
+}
+#overlay.active {
+    display: block; /* Show overlay when active */
+}

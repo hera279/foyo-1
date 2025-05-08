@@ -49,3 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.getElementById('signup-button').addEventListener('click', () => {
+    document.getElementById('overlay').classList.add('active');
+    document.getElementById('signup-dialog').classList.remove('hidden');
+});
+
+document.getElementById('close-dialog').addEventListener('click', () => {
+    document.getElementById('overlay').classList.remove('active');
+    document.getElementById('signup-dialog').classList.add('hidden');
+});
