@@ -74,26 +74,19 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault(); // Prevent default touch behavior
             activateSlide(item);
         });
-        item.addEventListener('touchend', (e) => {
-            e.preventDefault(); // Prevent default touch behavior
-            deactivateSlide(item);
-        });
 
-        const video = item.querySelector('video');
-
-        // Play the video when the item is clicked
-        item.addEventListener('click', debounce(() => {
+        item.addEventListener('click', () => {
             // Pause all other videos
             videoItems.forEach((el) => {
                 const otherVideo = el.querySelector('video');
-                if (otherVideo !== video) {
+                if (otherVideo !== item.querySelector('video')) {
                     otherVideo.pause();
                 }
             });
 
             // Play the clicked video
-            video.play();
-        }, 100));
+            activateSlide(item);
+        });
     });
 
     // Reset to default slide when the user clicks or touches outside the slider
