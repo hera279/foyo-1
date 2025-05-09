@@ -108,3 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 100));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const activeVideo = document.querySelector(".video-item.active");
+    if (activeVideo) {
+        const title = activeVideo.getAttribute("data-title");
+        const description = activeVideo.getAttribute("data-description");
+        const link = activeVideo.getAttribute("data-link");
+
+        document.getElementById("slider-title").textContent = title;
+        document.getElementById("slider-description").textContent = description;
+        document.getElementById("slider-link").setAttribute("href", link);
+    }
+});
