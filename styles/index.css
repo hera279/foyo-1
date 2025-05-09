@@ -180,8 +180,7 @@ p.in-viewport {
 }
 .social-ico img:hover {
     background: linear-gradient(60deg, var(--color-tertiary), var(--color-secondary));
-    text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
-    box-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
+    box-shadow: 0 4px 8px rgb(252, 168, 0);
     border-radius: 25%;
     position: relative;
 }
