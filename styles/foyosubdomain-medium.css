@@ -21,6 +21,9 @@
     .subdomain p {
         width: 90%;
     }
+    .subdomain button {
+    font-size: 12pt;
+    }
     .topics button {
         width: 25%;
         padding: 10px;

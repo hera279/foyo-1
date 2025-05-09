@@ -17,6 +17,10 @@
         width: 100%;
         text-align: justify;
     }
+    .subdomain button {
+    font-size: 10pt;
+    padding: 15px 0;
+    }
     .domain h2 {
         font-size: 15pt;
         text-align: left;
