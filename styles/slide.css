@@ -53,7 +53,11 @@
     margin: 0;
     font-size: 20pt;
     font-family: 'Times New Roman', serif;
-    font-weight: 400;
+    font-weight: 900;
+    background: linear-gradient(to left, white 30%, var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .slider-text p {

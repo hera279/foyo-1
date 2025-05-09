@@ -46,8 +46,11 @@ p.in-viewport {
     z-index: -1;
     pointer-events: none;
 }
-
-
+#bold {
+    font-weight: 900;
+    text-decoration: underline;
+    color: #fca10f;
+}
 .brand, .subdomain {
     display: flex;
     flex-direction: column;
@@ -88,10 +91,15 @@ p.in-viewport {
     overflow: hidden;
     color: white;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
     cursor: pointer;
 }
-
+.brand button {
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25pt;
+    font-weight: 400;   
+}
 .brand button::before, .domain button::before, .topics button::before {
     content: '';
     position: absolute;
@@ -140,13 +148,6 @@ p.in-viewport {
     text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
     box-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
 }
-.brand button {
-    text-decoration: none;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25pt;
-    font-weight: 400;   
-}
 .social-ico {
     display: flex;
     flex-direction: column;
@@ -185,11 +186,13 @@ p.in-viewport {
     position: relative;
 }
 .social-ico a {
-    text-decoration: none;
+    text-decoration: underline;
+    font-weight: bold;
     color: white;
 }
 .social-ico a:hover {
     text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
+    text-decoration: none;
 }
 .contact, .email-info {
     text-align: right;
