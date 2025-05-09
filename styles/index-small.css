@@ -134,4 +134,10 @@
     .accordion-trigger {
         display: none;
     }
+    .custom-cursor {
+        display: none;
+    }
+    a, button, input, textarea {
+        cursor: default; 
+    }
 }
