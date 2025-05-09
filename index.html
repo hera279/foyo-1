@@ -3,10 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>foyo.world</title>
+        <title>Foyo World - Empowering Entrepreneurs</title>
         <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
-        <meta name="description" content="A digital marketplace and creative ecosystem built to empower entrepreneurs.">
+        <meta name="description" content="Foyo World is a digital marketplace and creative ecosystem empowering entrepreneurs to turn ideas into income.">
+        <meta name="keywords" content="Foyo, digital marketplace, entrepreneurs, creative ecosystem, affiliate program, niche marketplaces">
         <meta name="author" content="HERA">
+        <meta property="og:title" content="Foyo World - Empowering Entrepreneurs">
+        <meta property="og:description" content="A vibrant hub for creators, sellers, and dreamers to grow, connect, and thrive.">
+        <meta property="og:image" content="media/default-preview.jpg">
+        <meta property="og:url" content="https://foyo.world">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Foyo World - Empowering Entrepreneurs">
+        <meta name="twitter:description" content="Join Foyo World to turn your ideas into income.">
+        <meta name="twitter:image" content="media/default-preview.jpg">
 <!-- styles -->
         <link rel="stylesheet" href="styles/index.css">
         <link rel="stylesheet" href="styles/index-small.css">
@@ -31,7 +40,7 @@
                 <h2>Foyo is for you.</h2>
                 <p>A place where creators, sellers, and dreamers turn ideas into income. Whether you’re sharing your story, showcasing your craft, or building your brand, this is your space to grow, connect, and thrive.
                 </p>
-                <button class="signup" id="signup-button">
+                <button class="signup" id="signup-button" aria-label="Sign up for Foyo World">
                     SIGN UP
                 </button>
                 <p>Ready to launch your space?
@@ -181,32 +190,32 @@
             </section>
             <section class="slider">
                 <div class="slider-text">
-                    <h3 id="slider-title"></h3>
+                    <h3 id="slider-title">Foyo World</h3>
                     <hr>
-                    <p id="slider-description"></p>
-                    <a id="slider-link" href="index.html"  class="page-link" target="_self" rel="noopener noreferrer" class="learn-more-button">Learn More</a>
+                    <p id="slider-description">Discover the best opportunities for creators and entrepreneurs.</p>
+                    <a id="slider-link" href="index.html"  class="page-link" target="_self" rel="noopener noreferrer" class="learn-more-button" aria-label="Learn more about Foyo World">Learn More</a>
                 </div>
                 <div class="slider-videos">
                     <div class="video-item" data-title="FOYOBOOK" data-description="Explore FoyoBook — a space for readers and writers. Discover authors and learn how to publish and sell your books!" data-link="foyobook.html">
-                        <video muted loop playsinline preload="metadata" loading="lazy">
+                        <video muted loop playsinline preload="metadata" loading="lazy" aria-label="FoyoBook video">
                             <source src="media/books.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="video-item active" data-title="FOYOPET" data-description="Discover FoyoPet — a heartfelt marketplace for pet lovers offering great handpicked products and opportunities." data-link="foyopet.html">
-                        <video muted loop playsinline preload="metadata" loading="lazy">
+                        <video muted loop playsinline preload="metadata" loading="lazy" aria-label="FoyoPet video">
                             <source src="media/pets.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="video-item" data-title="FOYOSTYLE" data-description="Visit FoyoStyle — your destination for fashion and personal care tips with curated products and affiliate options." data-link="foyostyle.html">
-                        <video muted loop playsinline preload="metadata" loading="lazy">
+                        <video muted loop playsinline preload="metadata" loading="lazy" aria-label="FoyoStyle video">
                             <source src="media/style.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="video-item" data-title="FOYOWELLNESS" data-description="Explore FoyoWellness — the right place for balanced living with fitness tools, wellness tips, and affiliate opportunities." data-link="foyowellness.html">
-                        <video muted loop playsinline preload="metadata" loading="lazy">
+                        <video muted loop playsinline preload="metadata" loading="lazy" aria-label="FoyoWellness video">
                             <source src="media/wellness.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -386,6 +395,21 @@
                 </div>
             </div>
         </footer>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Foyo World",
+            "url": "https://foyo.world",
+            "logo": "icons/favicon.ico",
+            "sameAs": [
+                "https://www.facebook.com/foyoworld",
+                "https://www.twitter.com/foyoworld",
+                "https://www.instagram.com/foyoworld"
+            ],
+            "description": "Foyo World is a digital marketplace empowering entrepreneurs to turn ideas into income."
+        }
+        </script>
         <script src="scripts/index.js" defer></script>
         <script src="scripts/slider.js" defer></script>
         <script src="scripts/footer.js" defer></script>
