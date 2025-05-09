@@ -38,7 +38,7 @@
     z-index: 10;
 }
 
-.slider-text {
+.slider-text a{
     width: 35%;
     padding: 20px;
     background: transparent;
@@ -73,7 +73,7 @@
     margin: 20px 0;
 }
 
-.learn-more-button {
+.slider-text a {
     display: inline-block;
     width: 35%;
     margin-top: 15px;
@@ -88,7 +88,7 @@
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.learn-more-button:hover {
+.slider-text a:hover {
     background: linear-gradient(60deg, var(--color-tertiary), var(--color-secondary));
     transition: background 0.3s ease;
     scale: 1.2;

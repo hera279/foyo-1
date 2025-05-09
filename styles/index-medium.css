@@ -102,9 +102,10 @@
         display: none;
     }
     .custom-cursor {
-        display: none;    
-    }    
-    a, button, input, textarea {
-        cursor: default; 
+        display: none;
+    }
+
+    *, a, button, input, textarea {
+        cursor: default !important; 
     }
 }

@@ -137,7 +137,8 @@
     .custom-cursor {
         display: none;
     }
-    a, button, input, textarea {
-        cursor: default; 
+
+    *, a, button, input, textarea {
+        cursor: default !important; 
     }
 }
