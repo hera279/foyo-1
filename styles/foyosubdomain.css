@@ -54,13 +54,11 @@
 }
 
 .topics button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
+    box-shadow: 0 4px 8px rgb(0, 97, 252);
 }
 
 .topics button.active {
-    text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
-    box-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
+   border: 2pt solid #000fb0;
 }
 
 .topic-section {
