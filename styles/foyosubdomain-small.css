@@ -96,7 +96,12 @@
     #thumbnail-description {
         font-size: 12pt;
     }
-    
+    .thumbnail img:hover {
+    transform: none;
+    }
+    .thumbnail.active {
+        transform: none;
+    }
     .slider.hover-slider {
         width: 100%;
     }
