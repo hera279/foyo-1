@@ -86,7 +86,7 @@
     color: white;
 }
 
-/* Mobile Version */
+.subpagesignup {
 @media (max-width: 767px) {
     .dialog {
         width: 80%;

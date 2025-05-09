@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="styles/foyosubdomain.css">
         <link rel="stylesheet" href="styles/foyosubdomain-small.css">
         <link rel="stylesheet" href="styles/foyosubdomain-medium.css">
+        <link rel="stylesheet" href="styles/signup.css">
 <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +31,7 @@
             <section class="subdomain">
                 <h1><a href="/" class="page-link" target="_self" rel="noopener noreferrer">FOYOSTYLE</a></h1>
                 <p>FoyoStyle is your destination for celebrating individuality through fashion and beauty. Discover curated products, expert advice, and inspiring stories to elevate your personal style.</p>
+                <button class="subpagesignup" id="signup-button"><span id="bold">Sign up now</span> and start building your future today.</button>
             </section>
             <section class="domain">
                 <a href="/" class="page-link" target="_self" rel="noopener noreferrer">
@@ -115,6 +117,7 @@
                 </div>
             </section>
         </main>
+        <div id="overlay" class="hidden"></div>
         <footer class="section-3">
             <video class="footer-video" autoplay muted loop playsinline preload="metadata" class="optimized-video">
                 <source src="media/monster.mp4" type="video/mp4">
@@ -269,11 +272,29 @@
                 <h1><a href="index.html" class="page-link" target="_self" rel="noopener noreferrer">foyo.world</a></h1>
                 <p>COPYRIGHT &copy;<span id="currentyear"></span> FOYO WORLD</p>
             </section>
+<div id="signup-dialog" class="dialog hidden">
+                <button id="close-dialog">X</button>
+                <form
+                    action="https://formspree.io/f/mgvkydww" method="POST" id="signup-form">
+                    <h2>Sign Up</h2>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="thank-you-message" class="hidden">
+                    <p>Thank you for signing up!</p>
+                </div>
+            </div>
         </footer>
         <script src="scripts/index.js" defer></script>
         <script src="scripts/slider.js" defer></script>
         <script src="scripts/footer.js" defer></script>
         <script src="scripts/foyosubdomain.js" defer></script>
         <script src="scripts/cursor.js" defer></script>
+        <script src="scripts/signup.js" defer></script>
     </body>
 </html>
