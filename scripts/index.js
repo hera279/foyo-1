@@ -27,4 +27,23 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('.section-3').scrollIntoView({ behavior: 'smooth' });
         });
     });
+
+    // Page transition effect
+    const pageLinks = document.querySelectorAll('.page-link');
+    const pageTransition = document.getElementById('page-transition');
+
+    pageLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetUrl = link.getAttribute('href');
+
+            // Activate the transition effect
+            pageTransition.classList.add('active');
+
+            // Wait for the animation to complete before navigating
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 600); // Match the duration in CSS
+        });
+    });
 });

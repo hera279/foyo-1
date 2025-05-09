@@ -16,7 +16,7 @@
     transform: translate(-50%, -50%);
     background: var(--color-primary);
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(252, 168, 0);
     z-index: 1000;
     border-radius: 8px;
     width: 20%;
@@ -76,8 +76,7 @@
 .dialog button:hover {
     scale: 1.2;
     transition: transform 0.3s ease-in;
-    text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
-    box-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
+    box-shadow: 0 4px 8px rgb(252, 168, 0);
 }
 
 #thank-you-message {
