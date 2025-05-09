@@ -1,11 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
     const defaultSlide = document.querySelector('.video-item[data-title="FOYOPETS"]');
     const videoItems = document.querySelectorAll('.video-item');
+    const sliderTitle = document.getElementById('slider-title');
+    const sliderDescription = document.getElementById('slider-description');
+    const sliderLink = document.getElementById('slider-link');
+
+    // Debounce function to limit event execution frequency
+    const debounce = (func, delay) => {
+        let timeout;
+        return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func(...args), delay);
+        };
+    };
 
     const setDefaultSlide = () => {
         if (defaultSlide) {
             // Reset all videos to their default state
-            document.querySelectorAll('.video-item').forEach((el) => {
+            videoItems.forEach((el) => {
                 el.style.transform = 'scale(1)';
                 el.style.zIndex = '1';
             });
@@ -14,12 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
             defaultSlide.style.transform = 'scale(1.2)';
             defaultSlide.style.zIndex = '10';
 
-            const title = defaultSlide.getAttribute('data-title');
-            const description = defaultSlide.getAttribute('data-description');
-            const link = defaultSlide.getAttribute('data-link');
-            document.getElementById('slider-title').textContent = title;
-            document.getElementById('slider-description').textContent = description;
-            document.getElementById('slider-link').href = link;
+            sliderTitle.textContent = defaultSlide.getAttribute('data-title');
+            sliderDescription.textContent = defaultSlide.getAttribute('data-description');
+            sliderLink.href = defaultSlide.getAttribute('data-link');
 
             const video = defaultSlide.querySelector('video');
             video.play();
@@ -29,70 +38,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set the default slide on page load
     setDefaultSlide();
 
+    const activateSlide = (item) => {
+        // Reset all videos to their default state
+        videoItems.forEach((el) => {
+            el.style.transform = 'scale(1)';
+            el.style.zIndex = '1';
+        });
+
+        // Bring the selected video to the front
+        item.style.transform = 'scale(1.2)';
+        item.style.zIndex = '10';
+
+        // Update the text content and link in the slider-text division
+        sliderTitle.textContent = item.getAttribute('data-title');
+        sliderDescription.textContent = item.getAttribute('data-description');
+        sliderLink.href = item.getAttribute('data-link');
+
+        // Play the video
+        const video = item.querySelector('video');
+        video.play();
+    };
+
+    const deactivateSlide = (item) => {
+        // Pause the video when the interaction ends
+        const video = item.querySelector('video');
+        video.pause();
+    };
+
     // Add hover and touch functionality for all slides
-    document.querySelectorAll('.video-item').forEach((item) => {
-        const activateSlide = () => {
-            // Reset all videos to their default state
-            document.querySelectorAll('.video-item').forEach((el) => {
-                el.style.transform = 'scale(1)';
-                el.style.zIndex = '1';
-            });
+    videoItems.forEach((item) => {
+        item.addEventListener('mouseover', debounce(() => activateSlide(item), 100));
+        item.addEventListener('mouseout', debounce(() => deactivateSlide(item), 100));
 
-            // Bring the selected video to the front
-            item.style.transform = 'scale(1.2)';
-            item.style.zIndex = '10';
-
-            // Update the text content and link in the slider-text division
-            const title = item.getAttribute('data-title');
-            const description = item.getAttribute('data-description');
-            const link = item.getAttribute('data-link');
-            document.getElementById('slider-title').textContent = title;
-            document.getElementById('slider-description').textContent = description;
-            document.getElementById('slider-link').href = link;
-
-            // Play the video
-            const video = item.querySelector('video');
-            video.play();
-        };
-
-        const deactivateSlide = () => {
-            // Pause the video when the interaction ends
-            const video = item.querySelector('video');
-            video.pause();
-        };
-
-        // Add hover functionality for desktop
-        item.addEventListener('mouseover', activateSlide);
-        item.addEventListener('mouseout', deactivateSlide);
-
-        // Add touch functionality for mobile
         item.addEventListener('touchstart', (e) => {
             e.preventDefault(); // Prevent default touch behavior
-            activateSlide();
+            activateSlide(item);
         });
         item.addEventListener('touchend', (e) => {
             e.preventDefault(); // Prevent default touch behavior
-            deactivateSlide();
+            deactivateSlide(item);
         });
-    });
 
-    // Reset to default slide when the user clicks or touches outside the slider
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.video-item')) {
-            setDefaultSlide();
-        }
-    });
-    document.addEventListener('touchstart', (e) => {
-        if (!e.target.closest('.video-item')) {
-            setDefaultSlide();
-        }
-    });
-
-    videoItems.forEach((item) => {
         const video = item.querySelector('video');
 
         // Play the video when the item is clicked
-        item.addEventListener('click', () => {
+        item.addEventListener('click', debounce(() => {
             // Pause all other videos
             videoItems.forEach((el) => {
                 const otherVideo = el.querySelector('video');
@@ -103,11 +93,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Play the clicked video
             video.play();
-        });
-
-        // Ensure the video continues playing after touch ends
-        item.addEventListener('touchend', () => {
-            video.play();
-        });
+        }, 100));
     });
+
+    // Reset to default slide when the user clicks or touches outside the slider
+    document.addEventListener('click', debounce((e) => {
+        if (!e.target.closest('.video-item')) {
+            setDefaultSlide();
+        }
+    }, 100));
+    document.addEventListener('touchstart', debounce((e) => {
+        if (!e.target.closest('.video-item')) {
+            setDefaultSlide();
+        }
+    }, 100));
 });

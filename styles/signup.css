@@ -1,3 +1,10 @@
+:root {
+    --color-primary: #171d5e;
+    --color-secondary: #B77E11;
+    --color-tertiary: #44002d;
+    --color-quaternary: #000024;
+}
+
 .hidden {
     display: none;
 }
@@ -7,7 +14,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgb(40, 38, 121);
+    background: var(--color-primary);
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -20,7 +27,7 @@
     font-family: 'Maven Pro', sans-serif;
     font-size: 16pt;
     text-align: center;
-    color: white
+    color:#ffa600;
 }
 
 .dialog label {
@@ -57,8 +64,8 @@
     display: block;
     width: auto;
     padding: 10px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    background: linear-gradient(60deg, var(--color-secondary), var(--color-tertiary));
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -66,21 +73,11 @@
     font-size: 12pt;
 }
 
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 16pt;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    width: auto;
-}
-
-.close-button:hover {
-    color: #ffffff;
+.dialog button:hover {
+    scale: 1.2;
+    transition: transform 0.3s ease-in;
+    text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
+    box-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue;
 }
 
 #thank-you-message {
@@ -117,13 +114,6 @@
         width: auto;
         font-size: 12pt;
     }
-    .close-button {
-        font-size: 12pt;
-        width: auto;
-    }
-    .close-button:hover {
-        color: #ffffff;
-    }
     #thank-you-message {
         font-size: 12pt;
     }    
@@ -131,7 +121,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .dialog {
-        width: 60%;
+        width: 50%;
     }
     .dialog h2 {
         font-size: 16pt;
@@ -153,13 +143,6 @@
     .dialog button {
         width: auto;
         font-size: 12pt;
-    }
-    .close-button {
-        font-size: 12pt;
-        width: auto;
-    }
-    .close-button:hover {
-        color: #ffffff;
     }
     #thank-you-message {
         font-size: 12pt;

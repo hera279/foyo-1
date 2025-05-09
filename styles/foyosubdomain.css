@@ -25,6 +25,10 @@
 }
 .subdomain h1 {
     font-size: 55pt;
+    background: linear-gradient(to left, white 30%, var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 .subdomain p {
     width: 80%;

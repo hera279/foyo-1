@@ -1,11 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('signup-button').addEventListener('click', () => {
-        document.getElementById('signup-dialog').classList.remove('hidden');
+    const overlay = document.getElementById('overlay');
+    const signupDialog = document.getElementById('signup-dialog');
+    const signupButton = document.getElementById('signup-button');
+    const closeDialogButton = document.getElementById('close-dialog');
+
+    signupButton.addEventListener('click', () => {
+        overlay.classList.add('active');
+        signupDialog.classList.remove('hidden');
     });
 
-    document.getElementById('close-dialog').addEventListener('click', (e) => {
+    closeDialogButton.addEventListener('click', (e) => {
         e.preventDefault(); // Prevent default behavior
-        document.getElementById('signup-dialog').classList.add('hidden');
+        overlay.classList.remove('active');
+        signupDialog.classList.add('hidden');
         document.getElementById('signup-form').reset();
     });
 });

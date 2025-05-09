@@ -127,10 +127,11 @@
     }
     
     .hero-overlay h2 {
-        font-size: 30pt;
+        font-size:20pt;
     }
     
     .hero-overlay p {
         width: 80%;
+        font-size: 12pt;
     }
 }
